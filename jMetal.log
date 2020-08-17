@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2020-08-11T17:47:21</date>
+  <millis>1597186041246</millis>
+  <sequence>0</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.JMetalLogger</class>
+  <method>configureLoggers</method>
+  <thread>1</thread>
+  <message>Loggers configured with null</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:21</date>
+  <millis>1597186041595</millis>
+  <sequence>1</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.051800926766070184
+GD              : 10.063742531054809
+IGD (N)         : 0.03952208027876816
+IGD             : 8.913358154081317
+IGD+ (N)        : 0.9112450570980444
+IGD+            : 203.60112129164455
+Spread (N)      : 0.7250480880045699
+Spread          : 0.8311718811124446
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:22</date>
+  <millis>1597186042014</millis>
+  <sequence>2</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05148103552703691
+GD              : 10.064131117494872
+IGD (N)         : 0.03952003093953386
+IGD             : 8.913197858633891
+IGD+ (N)        : 0.91118607167333
+IGD+            : 203.5950986498153
+Spread (N)      : 0.719669303199707
+Spread          : 0.8276565845482925
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:22</date>
+  <millis>1597186042354</millis>
+  <sequence>3</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05166265894735098
+GD              : 10.02206284662446
+IGD (N)         : 0.039519769403509625
+IGD             : 8.91319132201488
+IGD+ (N)        : 0.9111776409242495
+IGD+            : 203.594857395281
+Spread (N)      : 0.7102371855249392
+Spread          : 0.8309558252375105
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:22</date>
+  <millis>1597186042606</millis>
+  <sequence>4</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.051647224303973456
+GD              : 10.020929811084416
+IGD (N)         : 0.03951953986705882
+IGD             : 8.913174250130153
+IGD+ (N)        : 0.9111691299486226
+IGD+            : 203.59428942845435
+Spread (N)      : 0.7056538798985094
+Spread          : 0.8299742161916859
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:22</date>
+  <millis>1597186042899</millis>
+  <sequence>5</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05165029021638781
+GD              : 10.021546857134796
+IGD (N)         : 0.039519508163879655
+IGD             : 8.913154451208035
+IGD+ (N)        : 0.9111692316225558
+IGD+            : 203.59284954664056
+Spread (N)      : 0.7033456777042719
+Spread          : 0.8296485268806546
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:23</date>
+  <millis>1597186043100</millis>
+  <sequence>6</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.051647967874413954
+GD              : 10.021203633788982
+IGD (N)         : 0.03951928877672574
+IGD             : 8.913091482128717
+IGD+ (N)        : 0.911163104499236
+IGD+            : 203.59137921695105
+Spread (N)      : 0.7021918742202602
+Spread          : 0.8293474702942584
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:23</date>
+  <millis>1597186043285</millis>
+  <sequence>7</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05164305778876189
+GD              : 10.020965849276976
+IGD (N)         : 0.03951932801714612
+IGD             : 8.913078771078577
+IGD+ (N)        : 0.9111645885069893
+IGD+            : 203.59110963046768
+Spread (N)      : 0.7034582196598651
+Spread          : 0.8288380845326278
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:23</date>
+  <millis>1597186043444</millis>
+  <sequence>8</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.051631653004155564
+GD              : 10.018449271740954
+IGD (N)         : 0.039519303996614207
+IGD             : 8.913090437094041
+IGD+ (N)        : 0.9111630997093658
+IGD+            : 203.59139876341908
+Spread (N)      : 0.7018097310028656
+Spread          : 0.8286267452756385
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:23</date>
+  <millis>1597186043577</millis>
+  <sequence>9</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05162759465761488
+GD              : 10.017761393111469
+IGD (N)         : 0.039519591873339484
+IGD             : 8.913220314595865
+IGD+ (N)        : 0.9111703775075597
+IGD+            : 203.5944419160558
+Spread (N)      : 0.7007256621817822
+Spread          : 0.8284598755369063
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:23</date>
+  <millis>1597186043767</millis>
+  <sequence>10</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05162518544036265
+GD              : 10.016900384306055
+IGD (N)         : 0.039519144714453974
+IGD             : 8.91313058282037
+IGD+ (N)        : 0.9111588177472814
+IGD+            : 203.59226364360745
+Spread (N)      : 0.6993552686131401
+Spread          : 0.8284484930406713
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:23</date>
+  <millis>1597186043923</millis>
+  <sequence>11</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05162239809862869
+GD              : 10.016511513857834
+IGD (N)         : 0.03951906559861849
+IGD             : 8.913182422535861
+IGD+ (N)        : 0.9111545203835323
+IGD+            : 203.5933831924652
+Spread (N)      : 0.6992029703943691
+Spread          : 0.8284453988467456
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:24</date>
+  <millis>1597186044098</millis>
+  <sequence>12</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05162230132194511
+GD              : 10.016526621506515
+IGD (N)         : 0.03951914093294173
+IGD             : 8.913182422535861
+IGD+ (N)        : 0.9111572829654261
+IGD+            : 203.5933831924652
+Spread (N)      : 0.6991382627671159
+Spread          : 0.8284438234987886
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:24</date>
+  <millis>1597186044215</millis>
+  <sequence>13</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.051621170702048316
+GD              : 10.016278965539112
+IGD (N)         : 0.039519070079103887
+IGD             : 8.913183227281252
+IGD+ (N)        : 0.9111545914717387
+IGD+            : 203.59341619772235
+Spread (N)      : 0.6991371512002728
+Spread          : 0.8284442978267836
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:24</date>
+  <millis>1597186044362</millis>
+  <sequence>14</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.051624366699692406
+GD              : 10.016289665521782
+IGD (N)         : 0.03951926043847093
+IGD             : 8.913189866817442
+IGD+ (N)        : 0.9111583457067223
+IGD+            : 203.59386546539744
+Spread (N)      : 0.69916398490537
+Spread          : 0.8284768204154103
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:24</date>
+  <millis>1597186044471</millis>
+  <sequence>15</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05162545316625719
+GD              : 10.016282979697635
+IGD (N)         : 0.03951894314963706
+IGD             : 8.913172643249727
+IGD+ (N)        : 0.9111514937685953
+IGD+            : 203.59308985820158
+Spread (N)      : 0.6991325634947517
+Spread          : 0.8284621885831365
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:24</date>
+  <millis>1597186044620</millis>
+  <sequence>16</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05163216248468022
+GD              : 10.016426351550864
+IGD (N)         : 0.03951873970601977
+IGD             : 8.913098732751333
+IGD+ (N)        : 0.9111464924482312
+IGD+            : 203.5912782811128
+Spread (N)      : 0.7009091494709427
+Spread          : 0.8284665266164919
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:24</date>
+  <millis>1597186044705</millis>
+  <sequence>17</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05163409511435988
+GD              : 10.016484081680826
+IGD (N)         : 0.03951858929800883
+IGD             : 8.913084222195973
+IGD+ (N)        : 0.9111432354918602
+IGD+            : 203.59088496629934
+Spread (N)      : 0.70026955038759
+Spread          : 0.8284657626820061
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:24</date>
+  <millis>1597186044798</millis>
+  <sequence>18</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05163583478811126
+GD              : 10.016272783971674
+IGD (N)         : 0.039518720242197464
+IGD             : 8.913094453250842
+IGD+ (N)        : 0.9111463605848807
+IGD+            : 203.59113191487398
+Spread (N)      : 0.6997149371011419
+Spread          : 0.828466778298011
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:24</date>
+  <millis>1597186044896</millis>
+  <sequence>19</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05163269884807439
+GD              : 10.016115895286411
+IGD (N)         : 0.03951868040980737
+IGD             : 8.913097030497951
+IGD+ (N)        : 0.9111448354253983
+IGD+            : 203.5912077050971
+Spread (N)      : 0.698957940788825
+Spread          : 0.8284669893615406
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:24</date>
+  <millis>1597186044981</millis>
+  <sequence>20</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05162996831617748
+GD              : 10.015800368971481
+IGD (N)         : 0.03951870369804884
+IGD             : 8.913061361101585
+IGD+ (N)        : 0.9111451329464674
+IGD+            : 203.59050406515962
+Spread (N)      : 0.6989413944751066
+Spread          : 0.8284249244706857
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:25</date>
+  <millis>1597186045089</millis>
+  <sequence>21</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05162581631682534
+GD              : 10.01562169372794
+IGD (N)         : 0.039518717264314544
+IGD             : 8.913075629810002
+IGD+ (N)        : 0.9111455253147525
+IGD+            : 203.59080765644245
+Spread (N)      : 0.698927904334483
+Spread          : 0.8284251291715468
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:25</date>
+  <millis>1597186045194</millis>
+  <sequence>22</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.051625971186838655
+GD              : 10.015614930728217
+IGD (N)         : 0.03951879254962142
+IGD             : 8.913075629810002
+IGD+ (N)        : 0.9111475807743565
+IGD+            : 203.59080765644245
+Spread (N)      : 0.7002155975748771
+Spread          : 0.8284237303283605
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:25</date>
+  <millis>1597186045277</millis>
+  <sequence>23</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05162649651220261
+GD              : 10.016502260421857
+IGD (N)         : 0.03951893735784756
+IGD             : 8.91307435448709
+IGD+ (N)        : 0.9111532224220704
+IGD+            : 203.5907567724448
+Spread (N)      : 0.6994221053857468
+Spread          : 0.8283015039572603
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:25</date>
+  <millis>1597186045377</millis>
+  <sequence>24</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05161968514072033
+GD              : 10.016563952624502
+IGD (N)         : 0.03951882806350114
+IGD             : 8.913076059677234
+IGD+ (N)        : 0.9111491005455226
+IGD+            : 203.59081637978525
+Spread (N)      : 0.7006767813351571
+Spread          : 0.8284937679249994
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:25</date>
+  <millis>1597186045506</millis>
+  <sequence>25</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05161688965292823
+GD              : 10.016237213390616
+IGD (N)         : 0.039518890724925114
+IGD             : 8.913076090638496
+IGD+ (N)        : 0.9111514445369575
+IGD+            : 203.5908183359973
+Spread (N)      : 0.7005223990520056
+Spread          : 0.828484666771755
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:25</date>
+  <millis>1597186045592</millis>
+  <sequence>26</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05161631452434071
+GD              : 10.01617158284136
+IGD (N)         : 0.03951884454036806
+IGD             : 8.91307533169169
+IGD+ (N)        : 0.9111504684534919
+IGD+            : 203.59076786947426
+Spread (N)      : 0.7004695786099032
+Spread          : 0.8284829010102874
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:25</date>
+  <millis>1597186045702</millis>
+  <sequence>27</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.051616872422339484
+GD              : 10.016242380561415
+IGD (N)         : 0.03951877172139059
+IGD             : 8.913075169289446
+IGD+ (N)        : 0.9111481320338132
+IGD+            : 203.59075706992033
+Spread (N)      : 0.7002886515846527
+Spread          : 0.8284890403513578
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:25</date>
+  <millis>1597186045789</millis>
+  <sequence>28</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.0516178243578627
+GD              : 10.015987061438723
+IGD (N)         : 0.03951877472274892
+IGD             : 8.913073332931233
+IGD+ (N)        : 0.9111472110861902
+IGD+            : 203.59089671280938
+Spread (N)      : 0.7006637905917223
+Spread          : 0.8284734997064378
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:25</date>
+  <millis>1597186045875</millis>
+  <sequence>29</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05162010519194624
+GD              : 10.015699281896621
+IGD (N)         : 0.03951881326724479
+IGD             : 8.913148867020329
+IGD+ (N)        : 0.9111472560394533
+IGD+            : 203.59297126091826
+Spread (N)      : 0.7002151036799823
+Spread          : 0.8284788827643028
+Error ratio     : 1.0
+</message>
+</record>
+<record>
+  <date>2020-08-11T17:47:25</date>
+  <millis>1597186045958</millis>
+  <sequence>30</sequence>
+  <logger>org.uma.jmetal.util.JMetalLogger</logger>
+  <level>INFO</level>
+  <class>org.uma.jmetal.util.AbstractAlgorithmRunner</class>
+  <method>printQualityIndicators</method>
+  <thread>1</thread>
+  <message>
+Hypervolume (N) : 0.0
+Hypervolume     : 0.0
+Epsilon (N)     : 1.181532758883003
+Epsilon         : 273.3632
+GD (N)          : 0.05160104181131046
+GD              : 10.015589245807789
+IGD (N)         : 0.039518822860567286
+IGD             : 8.913105091467898
+IGD+ (N)        : 0.9111486394633377
+IGD+            : 203.59182488045724
+Spread (N)      : 0.7004855333402754
+Spread          : 0.82846591960272
+Error ratio     : 1.0
+</message>
+</record>
+</log>

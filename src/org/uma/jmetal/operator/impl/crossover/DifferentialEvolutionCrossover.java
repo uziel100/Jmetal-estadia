@@ -50,8 +50,7 @@ public class DifferentialEvolutionCrossover implements CrossoverOperator<DoubleS
     private BoundedRandomGenerator<Integer> jRandomGenerator;
     private BoundedRandomGenerator<Double> crRandomGenerator;
 
-    private JMetalRandom randomGenerator;
-    private OverallConstraintViolation<DoubleSolution> overallConstraintViolation;
+    private JMetalRandom randomGenerator;    
     private NumberOfViolatedConstraints<DoubleSolution> numberOfViolatedConstraints;
     private ViolationThresholdComparator<DoubleSolution> violationThresholdComparator;
     private List<DoubleSolution> populationCopy;
@@ -73,8 +72,7 @@ public class DifferentialEvolutionCrossover implements CrossoverOperator<DoubleS
     public DifferentialEvolutionCrossover(double cr, double f, String variant) {
         this(cr, f, variant, (a, b) -> JMetalRandom.getInstance().nextInt(a, b), (a, b) -> JMetalRandom.getInstance().nextDouble(a, b));
         randomGenerator = JMetalRandom.getInstance();
-
-        overallConstraintViolation = new OverallConstraintViolation<DoubleSolution>();
+        
         numberOfViolatedConstraints = new NumberOfViolatedConstraints<DoubleSolution>();
         violationThresholdComparator = new ViolationThresholdComparator<>();
     }
@@ -223,9 +221,9 @@ public class DifferentialEvolutionCrossover implements CrossoverOperator<DoubleS
             if (!isValid(child)) {                  
                 //_methodBoundary(child);
                 //_methodReflection(child);
-                //_methodEvolutionay(child, parentSolutions);
-                //_methodWrapping(child);
                 //_methodRandom(child);
+                //_methodEvolutionay(child, parentSolutions);
+                //_methodWrapping(child);                
                 //_methodCentroidV1(child, 2);
                 //_methodResAndRand(child);                                
                 
@@ -260,20 +258,20 @@ public class DifferentialEvolutionCrossover implements CrossoverOperator<DoubleS
     private void _applyMethod(DoubleSolution child, List<DoubleSolution> parentSolutions) {
         switch (methodUsed) {
             case 1:
-                _methodResAndRand(child);                
-                //_methodRandom(child);
+                _methodResAndRand(child);                                
                 break;
             case 2:
                 _methodCentroidV1(child, 2);
                 break;
             case 3:
                 //_methodReflection(child);
-                //_methodEvolutionay(child, parentSolutions);
-                _methodWrapping(child);
+                _methodEvolutionay(child, parentSolutions);
+                //_methodWrapping(child);
                 break;
             case 4:
                 //_methodBoundary(child);
-                _methodEvolutionay(child, parentSolutions);
+                //_methodEvolutionay(child, parentSolutions);
+                _methodReflection(child);
                 break;
             default:
                 break;
@@ -285,7 +283,6 @@ public class DifferentialEvolutionCrossover implements CrossoverOperator<DoubleS
     private void _methodResAndRand(DoubleSolution child) {
         int nres = 3 * child.getNumberOfVariables();
         int i = 0;
-
         do {
             _setOperationCruza(child, _getSolutions());
             i++;

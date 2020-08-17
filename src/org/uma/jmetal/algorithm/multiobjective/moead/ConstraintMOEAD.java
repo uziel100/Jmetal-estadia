@@ -70,7 +70,8 @@ public class ConstraintMOEAD extends AbstractMOEAD<DoubleSolution> {
         LP = (int) Math.round(0.5 * population.get(0).getNumberOfVariables()) + 2;
 
         do {
-
+            
+            
             differentialEvolutionCrossover._setProbability(tablePropability);
             
             differentialEvolutionCrossover._setSFSandSIS(population);
@@ -79,6 +80,7 @@ public class ConstraintMOEAD extends AbstractMOEAD<DoubleSolution> {
             MOEADUtils.randomPermutation(permutation, populationSize);
 
             for (int i = 0; i < populationSize; i++) {
+               
                 int subProblemId = permutation[i];
 
                 NeighborType neighborType = chooseNeighborType();
@@ -94,9 +96,9 @@ public class ConstraintMOEAD extends AbstractMOEAD<DoubleSolution> {
                 mutationOperator.execute(child);
                 problem.evaluate(child);
 
-                if (_isParticleWasRepair()) {
+                if (_isParticleWasRepair()) {                                                         
                     int flag = _evaluateMethod(subProblemId, child);
-                    _updateSolutionsBestAndBadByMethod(flag);
+                    _updateSolutionsBestAndBadByMethod(flag);                                        
                 }
 
                 evaluations++;
@@ -112,8 +114,12 @@ public class ConstraintMOEAD extends AbstractMOEAD<DoubleSolution> {
                 _getProbabilityForEachMethod();
                 int[] viabilityForMethod = _getViabilityByMethod();
                 
-                
-                tablePropability = _fillTableProbability(viabilityForMethod);                   
+                if(viabilityForMethod[0] == 0){
+                    tablePropability = _initializeProbability();
+                }else{
+                    tablePropability = _fillTableProbability(viabilityForMethod);                       
+                }
+                                
                 _clearSolutionBestAndBadByMethod();
             }
 
