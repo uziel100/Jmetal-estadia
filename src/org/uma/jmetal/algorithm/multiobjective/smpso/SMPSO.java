@@ -204,166 +204,155 @@ public class SMPSO extends AbstractParticleSwarmOptimization<DoubleSolution, Lis
             }
         }
     }
-    
-    
+
     @Override
-    protected void updatePosition(List<DoubleSolution> swarm) {        
-        double _particleRepaired = 0.0;
-        double _velocityRepaired = 0.0;    
-    
-        for (int i = 0; i < swarmSize; i++) {            
-            DoubleSolution particle = swarm.get(i);
-            DoubleSolution particleBefore = (DoubleSolution) particle.copy();
+    protected void updatePosition(List<DoubleSolution> swarm) {
+        for (int numberParticle = 0; numberParticle < swarmSize; numberParticle++) {
+            DoubleSolution particle = swarm.get(numberParticle);
+            DoubleSolution beforeParticle = (DoubleSolution) swarm.get(numberParticle).copy();
 
-            for (int j = 0; j < particle.getNumberOfVariables(); j++) {
-                particle.setVariableValue(j, particle.getVariableValue(j) + speed[i][j]);
-                
-                
-                if (particle.getVariableValue(j) < problem.getLowerBound(j)) {
-                    particle = _handlePosition(particleBefore, particle, j, problem.getLowerBound(j));
-                    _velocityRepaired = _handleVelocity(particleBefore, particle, j, speed[i][j]);
-                    /*_particleRepaired = _handlePosition(particleBefore, particle, j, problem.getLowerBound(j));
-                    _velocityRepaired = _handleVelocity(particleBefore, particle, j, speed[i][j]);
-                    */
-                    speed[i][j] = _velocityRepaired;
-                    //particle.setVariableValue(j, _particleRepaired);                    
-                }
-                if (particle.getVariableValue(j) > problem.getUpperBound(j)) {
-                    particle = _handlePosition(particleBefore, particle, j, problem.getUpperBound(j));
-                    _velocityRepaired = _handleVelocity(particleBefore, particle, j, speed[i][j]);
-                     
-                    /*_particleRepaired = _handlePosition(particleBefore, particle, j, problem.getUpperBound(j));
-                    _velocityRepaired = _handleVelocity(particleBefore, particle, j, speed[i][j]);*/
+            _updatePositionTest(particle, numberParticle);
 
-                    speed[i][j] = _velocityRepaired;
-                    //particle.setVariableValue(j, _particleRepaired);                    
-                }
+            if (!isValid(particle)) {
+                /* Method to repair speed */
                 
+                //none() -> the speed it's not repair (method not exits)
+                //_methodDeterministBack(particle, numberParticle);
+                //_methodRandomBack(particle, numberParticle);
+                //_methodAdjust(beforeParticle, particle, numberParticle);
+                _methodAbsorbZero(particle, numberParticle);
+                
+                /* Method to repair position */
+                //_methodBoundary(particle);
+                //_methodReflection(particle);
+                //_methodRandom(particle);
+                //_methodEvolutionay(particle);
+                _methodWrapping(particle);
             }
-        }        
-    } 
-
-    //METODOS PARA POSICION
-    
-    private DoubleSolution _handlePosition(DoubleSolution particleBefore, DoubleSolution particle, int i, double violatedLimitValue) {
-        double particleRepaired = 0.0;
-        DoubleSolution particleRep = (DoubleSolution) particle.copy();
-        
-        switch (this._position) {
-            case Boundary:
-                particleRepaired = _methodBoundary(violatedLimitValue);
-                break;
-            case Reflection:
-                particleRepaired = _methodReflection(particle.getVariableValue(i), violatedLimitValue);
-                break;
-            case Random:
-                particleRepaired = _methodRandom(particle, i);
-                break;
-            case Evolutionay:
-                particleRepaired = _methodEvolutionay(violatedLimitValue, i);
-                break;
-            case Wrapping:
-                particleRepaired = _methodWrapping(particle, i);
-                break;
-            case Conservatism:
-                particleRepaired = particleBefore.getVariableValue(i);
-                break;
-            case CentroidV1:
-                particleRep = _methodCentroidV1(particle, i);
-                break;
         }
-        if(this._position != _MethodForPosition.CentroidV1)
-            particleRep.setVariableValue(i, particleRepaired);
-        
-        return particleRep;
     }
 
-    private double _methodBoundary(double violatedLimitValue) {
-        return violatedLimitValue;
+    public void _updatePositionTest(DoubleSolution particle, int numberParticle) {
+        for (int dimension = 0; dimension < particle.getNumberOfVariables(); dimension++) {
+            particle.setVariableValue(dimension, particle.getVariableValue(dimension) + speed[numberParticle][dimension]);
+        }
     }
 
-    private double _methodReflection(double currentValue, double violatedLimitValue) {
-        return 2 * violatedLimitValue - currentValue;
+    public boolean isValid(DoubleSolution particle) {
+        for (int dimension = 0; dimension < particle.getNumberOfVariables(); dimension++) {
+            if (particle.getVariableValue(dimension) < problem.getLowerBound(dimension) || particle.getVariableValue(dimension) > problem.getUpperBound(dimension)) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    private void _methodBoundary(DoubleSolution particle) {
+        for (int j = 0; j < particle.getNumberOfVariables(); j++) {
+            if (particle.getVariableValue(j) < problem.getLowerBound(j)) {
+                particle.setVariableValue(j, problem.getLowerBound(j));
+            }
+            if (particle.getVariableValue(j) > problem.getUpperBound(j)) {
+                particle.setVariableValue(j, problem.getUpperBound(j));
+            }
+        }
     }
 
-    private double _methodRandom(DoubleSolution particle, int i) {
-        return particle.getLowerBound(i) + randomGenerator.nextDouble() * (particle.getUpperBound(i) - particle.getLowerBound(i));
+    private void _methodReflection(DoubleSolution particle) {
+        double newPositon = 0;
+        for (int j = 0; j < particle.getNumberOfVariables(); j++) {
+            if (particle.getVariableValue(j) < problem.getLowerBound(j)) {
+                newPositon = 2 * problem.getLowerBound(j) - particle.getVariableValue(j);
+                particle.setVariableValue(j, newPositon);
+            }
+            if (particle.getVariableValue(j) > problem.getUpperBound(j)) {
+                newPositon = 2 * problem.getUpperBound(j) - particle.getVariableValue(j);
+                particle.setVariableValue(j, newPositon);
+            }
+        }
     }
 
-    private double _methodEvolutionay(double violatedLimitValue, int i) {
-        double rnd = randomGenerator.nextDouble();
+    private void _methodRandom(DoubleSolution particle) {
+        double newPosition = 0;
+        for (int j = 0; j < particle.getNumberOfVariables(); j++) {
+
+            if (particle.getVariableValue(j) < problem.getLowerBound(j) || particle.getVariableValue(j) > problem.getUpperBound(j)) {
+                newPosition = particle.getLowerBound(j) + randomGenerator.nextDouble() * (particle.getUpperBound(j) - particle.getLowerBound(j));
+                particle.setVariableValue(j, newPosition);
+            }
+        }
+    }
+
+    private void _methodEvolutionay(DoubleSolution particle) {
+        double newPosition = 0;
         DoubleSolution gbest = selectGlobalBest();
+        
+        for (int j = 0; j < particle.getNumberOfVariables(); j++) {
+            
+            double rnd = randomGenerator.nextDouble();            
+            
+            if (particle.getVariableValue(j) < problem.getLowerBound(j)) {
+                newPosition = rnd * problem.getLowerBound(j) + (1 - rnd) * gbest.getVariableValue(j);
+                particle.setVariableValue(j, newPosition);
+            }
 
-        return rnd * violatedLimitValue + (1 - rnd) * gbest.getVariableValue(i);
+            if (particle.getVariableValue(j) > problem.getUpperBound(j)) {
+                newPosition = rnd * problem.getUpperBound(j) + (1 - rnd) * gbest.getVariableValue(j);
+                particle.setVariableValue(j, newPosition);
+            }
+        }      
     }
 
-    private double _methodWrapping(DoubleSolution particle, int i) {
-        double currentValue = particle.getVariableValue(i);
-        double lowetLimit = particle.getLowerBound(i);
-        double upperLimit = particle.getUpperBound(i);
+    private void _methodWrapping(DoubleSolution particle) {        
+        double newPosition = 0;        
+        
+        for (int j = 0; j < particle.getNumberOfVariables(); j++) {                
+            if (particle.getVariableValue(j) < problem.getLowerBound(j)) {
+                newPosition = particle.getUpperBound(j) - ( particle.getLowerBound(j) - particle.getVariableValue(j) ) % ( particle.getUpperBound(j) - particle.getLowerBound(j) ) ;
+                particle.setVariableValue(j, newPosition);
+            }
 
-        if (currentValue < lowetLimit)
-            return upperLimit - (lowetLimit - currentValue) % (upperLimit - lowetLimit);        
-
-        return lowetLimit + (currentValue - upperLimit) % (upperLimit - lowetLimit);
+            if (particle.getVariableValue(j) > problem.getUpperBound(j)) {
+                newPosition = particle.getLowerBound(j) - ( particle.getVariableValue(j) - particle.getUpperBound(j) ) % ( particle.getUpperBound(j) - particle.getLowerBound(j) ) ;
+                particle.setVariableValue(j, newPosition);
+            }
+        }                           
     }
 
-    
-    private DoubleSolution _methodCentroidV1(DoubleSolution particle, int i){
-        DoubleSolution gbest = selectGlobalBest();
-        //DoubleSolution particleRepairedDim = (DoubleSolution) particle.copy();
-        DoubleSolution particleNew = (DoubleSolution) particle.copy();
-        
-        double operation = 0;
-        double particleRepairedByRandom = _methodRandom(particle, i);
-        particle.setVariableValue(i, particleRepairedByRandom);
-        
-        for (int d = 0; d < particle.getNumberOfVariables(); d++) {
-            operation = (particle.getVariableValue(d) + gbest.getVariableValue(d)) / 2;
-            particleNew.setVariableValue(d, operation);
+    private void _methodAbsorbZero(DoubleSolution particle, int numberParticle) {
+        for (int j = 0; j < particle.getNumberOfVariables(); j++) {
+            if (particle.getVariableValue(j) < problem.getLowerBound(j) || particle.getVariableValue(j) > problem.getUpperBound(j)) {
+                speed[numberParticle][j] = 0;
+            }
         }
-        
-        return particleNew;    
     }
-    
-    
-    //METODOS PARA LA VELOCIDAD
-    private double _handleVelocity(DoubleSolution particleBefore, DoubleSolution particle, int i, double currentVelocity) {
-        double velocityRepaired = 0.0;
 
-        switch (this._velocity) {
-            case None:
-                velocityRepaired = currentVelocity;
-                break;
-            case AbsorbZero:
-                velocityRepaired = 0;
-                break;
-            case DeterministBack:
-                velocityRepaired = _methodDeterministBack(particle, i, currentVelocity);
-                break;
-            case RandomBack:
-                velocityRepaired = _methodRandomBack(currentVelocity);
-                break;
-            case Adjust:
-                velocityRepaired = _methodAdjust(particleBefore, particle, i);
-                break;
+    private void _methodDeterministBack(DoubleSolution particle, int numberParticle) {
+        for (int j = 0; j < particle.getNumberOfVariables(); j++) {
+
+            if (particle.getVariableValue(j) < problem.getLowerBound(j)) {
+                speed[numberParticle][j] = speed[numberParticle][j] * changeVelocity1;
+            }
+            if (particle.getVariableValue(j) > problem.getUpperBound(j)) {
+                speed[numberParticle][j] = speed[numberParticle][j] * changeVelocity2;
+            }
         }
-
-        return velocityRepaired;
     }
 
-    private double _methodDeterministBack(DoubleSolution particle, int i, double currentVelocity) {
-        double value = (particle.getVariableValue(i) < particle.getLowerBound(i)) ? this.changeVelocity1 : this.changeVelocity2;
-
-        return value * currentVelocity;
+    private void _methodRandomBack(DoubleSolution particle, int numberParticle) {
+        for (int j = 0; j < particle.getNumberOfVariables(); j++) {
+            if (particle.getVariableValue(j) < problem.getLowerBound(j) || particle.getVariableValue(j) > problem.getUpperBound(j)) {
+                speed[numberParticle][j] = -randomGenerator.nextDouble() * speed[numberParticle][j];
+            }
+        }
     }
 
-    private double _methodRandomBack(double currentVelocity) {
-        return -randomGenerator.nextDouble() * currentVelocity;
-    }
-
-    private double _methodAdjust(DoubleSolution particleBefore, DoubleSolution currentParticle, int i) {
-        return  currentParticle.getVariableValue(i) - particleBefore.getVariableValue(i);
+    private void _methodAdjust(DoubleSolution particleBefore, DoubleSolution particle, int numberParticle) {
+        for (int j = 0; j < particle.getNumberOfVariables(); j++) {
+            if (particle.getVariableValue(j) < problem.getLowerBound(j) || particle.getVariableValue(j) > problem.getUpperBound(j)) {
+                speed[numberParticle][j] = particle.getVariableValue(j) - particleBefore.getVariableValue(j);
+            }
+        }
     }
 
     @Override
